@@ -1,0 +1,1 @@
+-e git+http://anonscm.debian.org/git/apt/python-apt.git#egg=python-apt
