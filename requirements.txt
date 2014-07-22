@@ -1,1 +1,1 @@
--e git+http://anonscm.debian.org/git/apt/python-apt.git#egg=python-apt
+http://s3.amazonaws.com/cb-mirror/python-apt-0.9.3.8.tar.gz
