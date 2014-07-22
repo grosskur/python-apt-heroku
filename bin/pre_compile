@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# fail fast
+set -o errexit
+set -o nounset
+set -o pipefail
+
+indent() {
+  sed -u 's/^/       /'
+}
+
+sed -i -e 's/_Pragma(.*)//' $BUILD_DIR/vendor/python-apt-0.9.3.8/python/generic.h 2>&1 | indent
+
+mkdir -p $BUILD_DIR/.heroku/vendor/lib
+cp /usr/lib/libssl.so.0.9.8 /usr/lib/libcrypto.so.0.9.8 $BUILD_DIR/.heroku/vendor/lib
